@@ -1,0 +1,120 @@
+* {
+  cursor: crosshair;
+}
+
+body {
+  background-color: rgb(240, 240, 240);
+  margin: 20px;
+}
+
+#grid-container {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0px; /* Set the gap to 0 */
+  row-gap: 0px;
+  margin: 20px; /* Set the margin to 0 */
+  padding: 0px; /* Set the padding to 0 */
+  width: 50%;
+  height: auto;
+}
+
+.grid-item {
+  border: none;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  position: relative;
+  margin: 0px; /* Set the margin to 0 */
+  padding: 0px; /* Set the padding to 0 */
+}
+
+.svg-element,
+.grid-item div {
+  width: 100%;
+  height: 100%; /* Allow SVGs to adjust their height */
+  border: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#textInput {
+  position: fixed;
+  top: 50px;
+  left: 20px;
+  border: solid rgb(0, 0, 0);
+  outline: none;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(240, 240, 240);
+}
+#label {
+  position: fixed;
+  font-size: 24px;
+  left: 20px;
+  top: 15px;
+  text-decoration: underline;
+  color: rgb(0, 0, 0);
+}
+#b1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+  padding-top: -2px;
+  position: fixed;
+  width: 130px;
+  height: 20px;
+  border-radius: 30px;
+  top: 20px;
+  left: 398px;
+  border: none;
+  color: rgb(240, 240, 240);
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+#b2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+  padding-top: -2px;
+  position: fixed;
+  width: 130px;
+  height: 20px;
+  border-radius: 30px;
+  bottom: 20px;
+  left: 398px;
+  border: none;
+  color: rgb(240, 240, 240);
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+#totalSegments {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+#lTS {
+  position: fixed;
+  bottom: 42px;
+  left: 20px;
+}
+#lSF {
+  position: fixed;
+  bottom: 42px;
+  left: 398px;
+}
+
+/* Style for the slider */
+input[type="range"] {
+  width: 200px;
+  height: 10px;
+  margin: 5px 0;
+  background-color: #ddd; /* Track color */
+  outline: none;
+}
+
+input[type="file"] {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}

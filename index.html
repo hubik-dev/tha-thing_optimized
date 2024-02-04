@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stlyes.css" />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <title>Silent Hill</title>
+  </head>
+  <body>
+    <label for="textInput"><i>Enter-Text:::</i></label>
+    <div id="textInput" contenteditable="true"></div>
+
+    <!-- Slider for total segments -->
+    <label for="totalSegments"><i>Total-Segments:::</i></label>
+    <input
+      type="range"
+      id="totalSegments"
+      min="2"
+      max="18"
+      value="8"
+      oninput="updateGrid()"
+    />
+
+    <!-- Input for SVG file upload -->
+    <input
+      type="file"
+      id="svgInput"
+      accept=".svg"
+      multiple
+      onchange="handleSvgUpload()"
+    />
+    <div id="uploadedSvgContainer"></div>
+
+    <!-- Button to save the grid as PNG -->
+    <button onclick="saveAsPNG()" id="b2"><i>Save-as-PNG</i></button>
+
+    <!-- Button to generate grid -->
+    <button onclick="generateGrid()" id="b1" disabled>
+      <i>Generate Grid</i>
+    </button>
+
+    <div id="grid-container"></div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
